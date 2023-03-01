@@ -154,7 +154,7 @@ function catatan(r, msg) {
             let createListLi = document.createElement('li');
             createListLi.className = 'list-group-item text-secondary animate__animated animate__fadeInUp';
             createListLi.innerHTML = '<small>' + pesan + '</small>';
-            
+
             createListUl.appendChild(createListLi);
         }, j * 1000);
     }
@@ -164,6 +164,32 @@ function catatan(r, msg) {
 }
 
 function end(draw, w, l) {
+
+    var end = Date.now() + (15 * 1000);
+
+    var colors = ['#bb0000', '#ffffff'];
+
+    (function frame() {
+        confetti({
+            particleCount: 2,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 },
+            colors: colors
+        });
+        confetti({
+            particleCount: 2,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1 },
+            colors: colors
+        });
+
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+    }());
+
     let createListLog = document.createElement('a');
     createListLog.className = 'list-group-item list-group-item-action animate__animated animate__bounce';
     createListLog.href = `#rondeAkhir`;
@@ -296,12 +322,13 @@ battlebtn.addEventListener('click', () => {
     ronde++;
 
     setTimeout(() => {
-        if (p1.sisa <= 0 && p2.sisa <= 0)
+        if (p1.sisa <= 0 && p2.sisa <= 0) {
             end(true, p1.nama, p2.nama);
-        else if (p1.sisa <= 0)
+        } else if (p1.sisa <= 0) {
             end(false, p2.nama, p1.nama);
-        else if (p2.sisa <= 0)
+        } else if (p2.sisa <= 0) {
             end(false, p1.nama, p2.nama);
+        }
     }, 1000);
 
     if (p1.sisa <= 0) {
