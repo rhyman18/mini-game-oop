@@ -26,6 +26,17 @@
             --bs-popover-body-padding-x: 1rem;
             --bs-popover-body-padding-y: 1rem;
         }
+
+        .list-log {
+            height: 330px;
+        }
+
+        @media (max-width: 992px) {
+            .list-log {
+                height: auto;
+            }            
+        }
+
     </style>
 </head>
 
@@ -152,19 +163,17 @@
                     </div>
                     <div class="card-body">
                         <div class="row d-none" id="hideLoading">
-                            <div class="col-2">
-                                <div id="ronde" class="list-group overflow-auto" style="height: 330px;">
+                            <div class="col-lg-2 mb-lg-0 mb-3">
+                                <div id="ronde" class="list-group overflow-auto list-log">
                                 </div>
                             </div>
-                            <div class="col-10">
+                            <div class="col-lg-10">
                                 <div id="detailRonde" data-bs-spy="scroll" data-bs-target="#ronde"
-                                    data-bs-smooth-scroll="true" class="overflow-auto" style="height: 330px;"
-                                    tabindex="0">
+                                    data-bs-smooth-scroll="true" class="overflow-auto list-log">
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex justify-content-center align-items-center text-secondary" id="showLoading"
-                            style="height: 330px;">
+                        <div class="d-flex justify-content-center align-items-center text-secondary list-log" id="showLoading">
                             <div class="spinner-grow" role="status"></div>
                             <p class="card-text mx-2">Harap Mulai Pertarungan Terlebih dahulu...</p>
                         </div>

@@ -138,7 +138,7 @@ function catatan(r, msg) {
     listLog.appendChild(createListLog);
 
     let createListUl = document.createElement('ul');
-    createListUl.className = 'list-group list-group-flush mb-3';
+    createListUl.className = 'list-group mb-3';
 
     let createListJudul = document.createElement('li');
     createListJudul.className = 'list-group-item fw-bold text-white text-center bg-primary animate__animated animate__fadeInUp';
@@ -197,7 +197,7 @@ function end(draw, w, l) {
     listLog.appendChild(createListLog);
 
     let createListUl = document.createElement('ul');
-    createListUl.className = 'list-group list-group-flush mb-3';
+    createListUl.className = 'list-group mb-3';
 
     let createListJudul = document.createElement('li');
     createListJudul.id = `rondeAkhir`;
