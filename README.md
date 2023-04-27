@@ -1,6 +1,6 @@
 # Baku Hantam 1 vs. 1
 
-Membuat aplikasi permainan sederhana (turn based games) pertarungan antara kedua player. Template style menggunakan framework `Bootstrap` & Script menggunakan javascript (Vanilla Js) dengan menggunakan pemrograman berdasarkan objek (OOP), serta didukung penyimpanan menggunakan local storage.
+Membuat aplikasi permainan sederhana (turn based games) pertarungan antara kedua player. Template style menggunakan framework `Bootstrap` & Script menggunakan javascript (native) dengan menggunakan pemrograman berdasarkan objek (OOP), serta didukung penyimpanan menggunakan local storage.
 
 # Deployment Web
 
